@@ -6,6 +6,7 @@ module.exports = function () {
   return {
       add: function (fun) {
         tasks.push(fun)
+        return this
       }
     , exec: function (callback) {
         series(tasks, callback)
