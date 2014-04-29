@@ -1,11 +1,11 @@
-# parallelify[![build status](https://secure.travis-ci.org/kesla/parallelify.png)](http://travis-ci.org/kesla/parallelify)
+# seriesify[![build status](https://secure.travis-ci.org/kesla/seriesify.png)](http://travis-ci.org/kesla/seriesify)
 
-An alternative api to run-parallel
+An alternative api to run-series
 
 ## Installation
 
 ```
-npm install parallelify
+npm install seriesify
 ```
 
 ## Example
@@ -13,21 +13,21 @@ npm install parallelify
 ### Input
 
 ```javascript
-var p = require('./parallelify')()
+var s = require('./seriesify')()
 
-p.add(function (cb) {
+s.add(function (cb) {
   setTimeout(function () {
     cb(null, 1)
   }, 200)
 })
 
-p.add(function (cb) {
+s.add(function (cb) {
   setTimeout(function () {
     cb(null, 2)
   }, 100)
 })
 
-p.exec(function (err, results) {
+s.exec(function (err, results) {
   console.log(results)
 })
 ```

@@ -1,13 +1,13 @@
 // basis for this test is borrowed from
 // https://github.com/feross/run-parallel/blob/master/test/array.js
 
-var parallelify = require('./parallelify')
+var seriesify = require('./seriesify')
 var test = require('tape')
 
-test('functions run in parallel', function (t) {
+test('functions run in series', function (t) {
   t.plan(4)
 
-  var p = parallelify()
+  var p = seriesify()
 
   p.add(function (cb) {
     t.pass('cb 1')
@@ -32,7 +32,7 @@ test('functions run in parallel', function (t) {
 test('functions that return results', function (t) {
   t.plan(4)
 
-  var p = parallelify()
+  var p = seriesify()
 
   p.add(function (cb) {
     t.pass('cb 1')

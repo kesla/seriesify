@@ -1,4 +1,4 @@
-var parallel = require('run-parallel')
+var series = require('run-series')
 
 module.exports = function () {
   var tasks = []
@@ -8,7 +8,7 @@ module.exports = function () {
         tasks.push(fun)
       }
     , exec: function (callback) {
-        parallel(tasks, callback)
+        series(tasks, callback)
       }
   }
 }

@@ -1,17 +1,17 @@
-var p = require('./parallelify')()
+var s = require('./seriesify')()
 
-p.add(function (cb) {
+s.add(function (cb) {
   setTimeout(function () {
     cb(null, 1)
   }, 200)
 })
 
-p.add(function (cb) {
+s.add(function (cb) {
   setTimeout(function () {
     cb(null, 2)
   }, 100)
 })
 
-p.exec(function (err, results) {
+s.exec(function (err, results) {
   console.log(results)
 })
