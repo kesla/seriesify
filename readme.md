@@ -2,6 +2,10 @@
 
 An alternative api to run-series
 
+[![NPM](https://nodei.co/npm/seriesify.png?downloads&stars)](https://nodei.co/npm/seriesify/)
+
+[![NPM](https://nodei.co/npm-dl/seriesify.png)](https://nodei.co/npm/seriesify/)
+
 ## Installation
 
 ```
